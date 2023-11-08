@@ -1,5 +1,5 @@
 #include"libft.h"
-
+/* set "len" amount of bytes of "c" to unsigned char "b"*/
 void	*ft_memset(void *b, int c, size_t len) // inicialise len number of bytes to c in b
 {
 	while ( len > 0)

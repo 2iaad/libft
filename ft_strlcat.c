@@ -1,5 +1,5 @@
 #include"libft.h"
-
+/* combine two strings then returns their size */
 size_t  ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
     // restrict informs the compiler that memory does not overlap
 {

@@ -1,5 +1,5 @@
 #include"libft.h"
-
+/*finds a substr in s starting from index "start" and allocate exactlyn"len" size for substr */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
@@ -26,5 +26,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int main()
 {
     char *a = "salam";
-    printf("%s",ft_substr(a,2,1));
+    printf("%s",ft_substr(a,2,3));
 }
