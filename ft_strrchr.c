@@ -1,6 +1,6 @@
-#include "libft.h"
+#include"libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*strrchr(const char *s, int c)
 {
 		int len;
 
@@ -20,10 +20,8 @@ char	*ft_strrchr(const char *s, int c)
 		return(0);
 }
 
-int main()
+/*int main()
 {
-	char str[100] = "q";
-	int c = 's';
-	printf("%s\n",ft_strrchr(str,c));
-	printf("%s",strrchr(str,c));
-}
+	char str[100] = "salam layn3al tbon5mok";
+	printf("%s",strrchr(str,'l'));
+}*/

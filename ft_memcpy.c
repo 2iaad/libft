@@ -1,8 +1,7 @@
-#include "libft.h"
+#include"libft.h"
 
-void	*ft_memcpy(void *restrict dest,const void *restrict src , size_t n)
+void	*ft_memcpy(void *dest,const void *src, size_t n)
 	//const: It indicates that the data pointed to by the pointer is constant, meaning you cannot modify the data through this pointer. 
-	//restrict: indicate that the source and destination pointers (src and dst) do not overlap in memory.
 {
 	unsigned char *d; // unsigned because a string cannot have negative values
 	unsigned char *s;
@@ -22,12 +21,12 @@ void	*ft_memcpy(void *restrict dest,const void *restrict src , size_t n)
 	return (dest); // cant return d,bec we need to return a void pointer
 }
 
-int main()
+/*int main()
 {
 	char a[20] = "ziyad derfoufi";
 	printf("%s",ft_memcpy(a+3,a,15));
 }
-/*int main()
+int main()
 {
 	char d[3] = "";
 	char s[] = "hello";

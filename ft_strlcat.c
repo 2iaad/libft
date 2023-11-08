@@ -29,6 +29,6 @@ int main()
 {
     char dest[11] = "ana";
     char *src = "";
-    printf("%lu\n",ft_strlcat(dest,src,50));
-    printf("%lu",strlcat(dest,src,50));
+    printf("%lu\n",ft_strlcat(dest,src,11));
+    printf("%lu",strlcat(dest,src,11));
 }

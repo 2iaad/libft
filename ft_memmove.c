@@ -1,7 +1,7 @@
-#include "libft.h"
+#include"libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len) // len:number of bytes to copy
-	//designed to handle overlapping memory regions correctly
+void	*ft_memmove(void *dest, const void *src, size_t len) // len;number of bytes to copy
+//designed to handle overlapping memory regions correctly
 {
 	char *s;
 	char *d;
@@ -20,23 +20,10 @@ void	*ft_memmove(void *dest, const void *src, size_t len) // len:number of bytes
 			d[i] = s[i];
 			i++;
 		}
-	return(d);
+	return(dest);
 }
-/*int main() {
-    char a[20] = "ziyad derfoufi";
-    ft_memmove(a + 3, a, 4);
-    printf("%s\n", a);
-
-    char b[20] = "ziyad derfoufi";
-    memmove(b + 3, b, 4);
-    printf("%s", b);
-
-    return 0;
-}*/
-
 /*int main()
 {
 	char a[20] = "ziyad derfoufi";
-	printf("%s\n", ft_memmove(a+3,a,4));
-	printf("%s", memmove(a+3,a,4));
+	printf("%s",ft_memmove(a+3,a,15));
 }*/

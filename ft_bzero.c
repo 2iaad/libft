@@ -1,4 +1,4 @@
-#include "libft.h"
+#include"libft.h"
 
 void	ft_bzero(void *ptr,size_t n)
 {
@@ -10,11 +10,11 @@ void	ft_bzero(void *ptr,size_t n)
 	}
 }
 
-int  main()
+/*int  main()
 {
 	char uno[10] = "salam";
 	printf("%s\n",uno);
-	ft_bzero(uno,3);
+	ft_bzero(uno,1);
 	printf("%s\n",uno);
 	return (0);
-}
+}*/

@@ -6,8 +6,8 @@ char		*ft_strdup(const char *s1)
 	size_t	i;
 
 	i = 0;
-	s2 = (char *) malloc (sizeof(char) * ft_strlen(s1) + 1);
-	if (s1 == NULL)
+	s2 = (char *) malloc (sizeof(char) * ft_strlen(s1) + 1); // to allocate memory for substring
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
 	while (s1[i])
 	{
