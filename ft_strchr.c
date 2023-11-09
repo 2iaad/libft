@@ -2,8 +2,6 @@
 
 char	*ft_strchr(const char	*s,int c)
 {
-	char *o;
-	o = (char*)s;
 	int i;
 
 	i = 0;
@@ -11,9 +9,9 @@ char	*ft_strchr(const char	*s,int c)
 		return(0);
 	while (s[i] != '\0')
 	{
-		if (o[i] == c)
+		if (s[i] == c)
 		{
-			return(o+i); // now the adresse of the pointer will incremente by i ( [o+i,'\0'[ )
+			return((char*)s+i); // now the adresse of the pointer will incremente by i ( [o+i,'\0'[ )
 		}
 		i++;
 	}
@@ -22,5 +20,6 @@ char	*ft_strchr(const char	*s,int c)
 
 /*int main()
 {
-	printf("%s",ft_strchr("",'l'));
+	printf("%s\n",ft_strchr(" sls",'l'));
+	printf("%s",strchr(" sls",'l'));
 }*/
