@@ -6,16 +6,12 @@ size_t  ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsiz
     size_t  i;
     size_t  j;
 
-    i = 0;
+    i = ft_strlen(dst);
     j = 0;
     if (dst[i] == '\0')
         return(ft_strlen(src));
     if (src[i] == '\0')
         return(ft_strlen(dst));
-    while (dst[i] != '\0' && i < dstsize) // skip the dest to the last of the string
-    {
-        i++;
-    }
     while (src[j] && i+j+1 <= dstsize) //copy src to the last of the dest,making enough space for the null terminator
     {
         dst[i+j] = src[j];
@@ -27,10 +23,10 @@ size_t  ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsiz
 
 int main()
 {
-    char dest[25] = "";
+    char dest[3] = "oho";
     char *src = "salam";
-    printf("%lu\n",ft_strlcat(dest,src,25));
+    printf("%lu\n",ft_strlcat(dest,src,11));
     printf("%s\n",dest);
-    printf("%lu\n",strlcat(dest,src,25));
-    printf("%s",dest);
+    printf("%lu\n",strlcat(dest,src,11));
+    printf("%s\n",dest);
 }

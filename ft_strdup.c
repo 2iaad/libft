@@ -17,9 +17,9 @@ char		*ft_strdup(const char *s1)
 	s2[i] = '\0';
 	return (s2);
 }
-int main()
+/*int main()
 {
-    const char *s1 = "sallam";
+    const char s1[2] = "sallam";
     printf("%s\n",ft_strdup(s1));
     printf("%s",strdup(s1));
-}
+}*/

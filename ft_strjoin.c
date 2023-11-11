@@ -1,5 +1,5 @@
 #include"libft.h"
-
+/* allocate memory(str) for the combined s1 and s2 and return (str),guaranty ending with '\0' */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;

@@ -15,14 +15,14 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
     }
     return(len);
 }
-int main()
+/*int main()
 {
-    char d[10] = "salam hehe";
+    char d[20] = "salam hehe";
     const char *s = "hello";
-    printf("%lu\n",ft_strlcpy(d,s,sizeof(d)));
-    printf("%s\n",d);
-    printf("%lu\n",strlcpy(d,s,sizeof(d)));
+    printf("%lu\n",ft_strlcpy(d,s,1));
     printf("%s",d);
-}
+    printf("%lu\n",strlcpy(d,s,1));
+    printf("%s",d);
+}*/
 /* strcpy is simple but risky because it doesn't check buffer sizes, while strlcpy is designed to be safer 
 by taking the buffer size into account and ensuring null-termination */

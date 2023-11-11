@@ -10,5 +10,5 @@ size_t	ft_strlen(const char *s)
 }
 /*int main()
 {
-	printf("%d",strlen("12345678"));
+	printf("%d",ft_strlen("12345678"));
 }*/

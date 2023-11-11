@@ -3,6 +3,7 @@
 static int	ft_digitsnum(int nb)
 {
 	int i;
+
 	i = 0;
 	if (nb == 0)
 		return(1);
@@ -32,7 +33,7 @@ char	*ft_itoa(int n)
 		nb *= -1; // convert to positive
 		digitsnum++; // reserve space for the '-' sign
 	}
-	memptr = (char*)malloc(sizeof(char) *digitsnum + 1); // +1 for null terminator
+	memptr = (char*)malloc(sizeof(char) * digitsnum + 1); // +1 for null terminator
 	if(!memptr)
 		return (NULL);
 	
@@ -50,5 +51,6 @@ char	*ft_itoa(int n)
 
 int main()
 {
-	printf("%s",ft_itoa(666));
+	int c = 66666;
+	printf("%s",ft_itoa(c));
 }
