@@ -27,6 +27,7 @@ SRC = ft_isalpha.c \
       ft_strlcpy.c \
       ft_strlcat.c \
       ft_atoi.c \
+      
 
 OBJ = $(SRC:.c=.o)
 
