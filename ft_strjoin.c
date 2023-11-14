@@ -1,4 +1,16 @@
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/14 20:26:53 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/14 20:26:55 by zderfouf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 /* allocate memory(str) for the combined s1 and s2 and return (str),guaranty ending with '\0' */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -21,7 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		str[i + j] = s2[j];
 		j++;
 	}
-	str[i + j] = '\0'; // put null at the end to 
+	str[i + j] = '\0'; // put null at the end to
 	return (str);
 }
 int main ()

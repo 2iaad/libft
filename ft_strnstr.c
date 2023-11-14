@@ -1,4 +1,16 @@
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/14 20:27:59 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/14 20:28:00 by zderfouf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char	*strnstr(const char *haystack, const char *needle, size_t len) // locate a substring in a string
 {
@@ -25,7 +37,7 @@ char	*strnstr(const char *haystack, const char *needle, size_t len) // locate a 
 			}
 			j = 0; // the loop fails and initialize the j=0 to go to first letter of the substring and check again
 		}
-		i++; // to go to next letter of the string 
+		i++; // to go to next letter of the string
 	}
 	return(0);
 }

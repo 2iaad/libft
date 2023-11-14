@@ -1,4 +1,16 @@
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/14 20:24:28 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/14 20:24:29 by zderfouf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 static  int ft_countnumbers(int n)
 {
@@ -35,7 +47,7 @@ char *ft_itoa(int n)
     ptr = (char*) malloc (sizeof(char) * cn + 1);
     if (!ptr)
         return (NULL);
-    
+
     ptr[cn] = '\0';
     while( cn > 1)
     {

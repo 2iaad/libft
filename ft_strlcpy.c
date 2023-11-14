@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/14 20:27:17 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/14 20:27:18 by zderfouf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /* this function copy src to dest "size" times, then returns size of src ,guaranty la termination avec '\0'*/
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
@@ -24,5 +36,5 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
     printf("%lu\n",strlcpy(d,s,1));
     printf("%s",d);
 }*/
-/* strcpy is simple but risky because it doesn't check buffer sizes, while strlcpy is designed to be safer 
+/* strcpy is simple but risky because it doesn't check buffer sizes, while strlcpy is designed to be safer
 by taking the buffer size into account and ensuring null-termination */

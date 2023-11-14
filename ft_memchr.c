@@ -1,5 +1,16 @@
-#include<stdio.h>
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/14 20:24:38 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/14 20:24:39 by zderfouf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	*memchr(const void *s, int c, size_t n) // finds exact byte in a memory
 {

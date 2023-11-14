@@ -1,10 +1,22 @@
-#include"libft.h"
-/* set "len" amount of bytes of "c" to unsigned char "b" custun implementation*/ 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/14 20:25:23 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/14 20:25:24 by zderfouf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+/* set "len" amount of bytes of "c" to unsigned char "b" custun implementation*/
 void	*ft_memset(void *b, int c, size_t len) //int offers flexibility to set a wider range of values in memory,size_t;represent sizes of objects
 {
 	while ( len > 0)
 	{
-		((unsigned char *)b)[len-1] = (unsigned char)c; // -1 bec while itterating we start from zeroc, unsigned char=>avoiding sign-extension issues that could occur 
+		((unsigned char *)b)[len-1] = (unsigned char)c; // -1 bec while itterating we start from zeroc, unsigned char=>avoiding sign-extension issues that could occur
 		len--;
 	}
 	return(b);

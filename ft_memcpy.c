@@ -1,7 +1,19 @@
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/14 20:25:00 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/14 20:25:01 by zderfouf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dest,const void *src, size_t n)
-	//const: It indicates that the data pointed to by the pointer is constant, meaning you cannot modify the data through this pointer. 
+	//const: It indicates that the data pointed to by the pointer is constant, meaning you cannot modify the data through this pointer.
 {
 	unsigned char *d; // unsigned because a string cannot have negative values
 	unsigned char *s;

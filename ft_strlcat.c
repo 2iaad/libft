@@ -1,4 +1,16 @@
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/14 20:27:06 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/14 20:27:07 by zderfouf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 /* combine two strings then returns their size,guaranty ending with '\0' */
 size_t  ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
     // restrict informs the compiler that memory does not overlap

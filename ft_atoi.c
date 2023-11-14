@@ -1,14 +1,24 @@
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/14 19:58:44 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/14 19:59:06 by zderfouf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	atoi(const char *str)
 {
-	int i;
-	int i2;
-	int s;
-	int nb;
+	int	i;
+	int	s;
+	int	nb;
 
 	i = 0;
-	i2 = 0;
 	s = 1;
 	nb = 0;
 	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
@@ -17,16 +27,15 @@ int	atoi(const char *str)
 	}
 	while (str[i] == '-' || str[i] == '+')
 	{
-		if (str[i] == '-' && i2 <= 1)
+		if (str[i] == '-')
 		{
-			s*= -1;
-			i2++;
+			s *= -1;
 		}
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		nb = nb*10 + (str[i] - '0');
+		nb = nb * 10 + (str[i] - '0');
 		i++;
 	}
 	return (nb * s);

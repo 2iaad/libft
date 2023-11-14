@@ -1,4 +1,16 @@
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/14 20:26:11 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/14 20:26:12 by zderfouf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 static  int ft_wc(char const *s, char c) // looks for a word 9bel mnha ' '
 {
@@ -22,7 +34,7 @@ static char	*allocat_andcopy_words(const char *s, int start, int end)
 	int		i;
 
 	i = 0;
-	word = (char *) malloc (sizeof(char)*(end - start + 1)); // +1 for the null terminator 
+	word = (char *) malloc (sizeof(char)*(end - start + 1)); // +1 for the null terminator
 	while (start < end)
 		word[i++] = s[start++];
 	return (word);
@@ -49,7 +61,7 @@ static  char **assign_words(int wc,const char *s , char c,char **p2s)
     p2s[word_allocation] = NULL; // Null-terminate the array of strings
     return (p2s);
 }
-char    **ft_split(const char *s, char c) 
+char    **ft_split(const char *s, char c)
 {
     int i;
     int wc;
