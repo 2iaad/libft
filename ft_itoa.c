@@ -1,56 +1,56 @@
 #include"libft.h"
 
-static int	ft_digitsnum(int nb)
+static  int ft_countnumbers(int n)
 {
-	int i;
+    int i;
 
-	i = 0;
-	if (nb == 0)
-		return(1);
-	while (nb)
-	{
-		nb /= 10;
-		i++;
-	}
-	return(i);
+    i = 0;
+	if ( n == 0 )
+        return (1);
+    while (n)
+    {
+        n /= 10;
+        i++;
+    }
+    return (i);
 }
 /*int main()
 {
-	long int q = 123456789101112;
-	printf("%d",ft_digitnum(q));
+    long int q = 123456789101112;
+    printf("%d",ft_digitnum(q));
 }*/
-
-char	*ft_itoa(int n)
+char *ft_itoa(int n)
 {
-	int digitsnum;
-	char *memptr; // this will point to the memory allocated
-	int nb;
+    long int nb;
+    int cn;
+    char *ptr;
 
-	nb = n;
-	digitsnum = ft_digitsnum(nb);
-	if ( nb < 0)
-	{
-		nb *= -1; // convert to positive
-		digitsnum++; // reserve space for the '-' sign
-	}
-	memptr = (char*)malloc(sizeof(char) * digitsnum + 1); // +1 for null terminator
-	if(!memptr)
-		return (NULL);
-	
-	memptr[digitsnum] = '\0';
-	while(digitsnum)
-	{
-		digitsnum--;
-		memptr[digitsnum] = nb % 10 + '0';
-		nb /= 10;
-	}
-	if( n < 0)
-		memptr[0] = '-';
-	return (memptr);
+    nb = n;
+    cn = ft_countnumbers(nb);
+    if ( nb < 0 )
+    {
+        nb *= -1;
+        cn++;
+    }
+    ptr = (char*) malloc (sizeof(char) * cn + 1);
+    if (!ptr)
+        return (NULL);
+    
+    ptr[cn] = '\0';
+    while( cn > 1)
+    {
+        cn--;
+        ptr[cn]= nb % 10 +'0';
+        nb /= 10;
+    }
+	if (n < 0)
+        ptr[0] = '-';
+    return(ptr);
 }
-
 int main()
 {
-	int c = 66666;
-	printf("%s",ft_itoa(c));
+    int c = -15;
+    printf("%s",ft_itoa(c));
 }
+/* in the context of integers, the signed representation doesn't distinguish between positive and negative zero,
+both are represented as 0 in memory */
