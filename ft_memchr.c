@@ -6,33 +6,32 @@
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:24:38 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/14 20:24:39 by zderfouf         ###   ########.fr       */
+/*   Updated: 2023/11/19 17:58:54 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include<stdio.h>
 
-void	*memchr(const void *s, int c, size_t n) // finds exact byte in a memory
+char	*ft_memchr(const void *s, int c, size_t n)
 {
-	char *o;
-	o = (char*)s;
-	size_t i;
+	unsigned char	*o;
+	size_t			i;
 
 	i = 0;
-	if(c == '\0') //not necessairy
-		return(0);
-	while (o[i] != '\0' && i <= n)
+	o = (unsigned char *)s;
+	while (i < n)
 	{
-		if (o[i] == c)
-		{
-			return(o+i); // now the adresse of the pointer will incremente by i ( [o+i,'\0'[ )
-		}
+		if (o[i] == (unsigned char)c)
+			return ((char*)o + i);
 		i++;
 	}
-	return(0);
+	return (0);
 }
 
-/*int main()
-{
-	printf("%s",memchr("123xxxxx",'\0',2));
-}*/
+// int main()
+// {
+// 	int *i = "1V";
+// 	char *s = i[0];
+// 	printf("%s",s);
+// 	// printf("%s",ft_memchr("15$cc2Va$321xx",i,10));
+// }

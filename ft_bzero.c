@@ -6,22 +6,15 @@
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:01:32 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/14 20:01:35 by zderfouf         ###   ########.fr       */
+/*   Updated: 2023/11/15 19:50:05 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *ptr, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	char	*ptrr;
-
-	ptrr = (char *)ptr;
-	while (n--)
-	{
-		*ptrr = 0;
-		ptrr++;
-	}
+	ft_memset(s, 0, n);
 }
 
 /*int  main()

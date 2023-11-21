@@ -12,30 +12,36 @@
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len) // len;number of bytes to copy
-//designed to handle overlapping memory regions correctly
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	char *s;
-	char *d;
-//s and d are character pointers used to cast the source and destination memory pointers to char*
-	size_t i;
+	char	*s;
+	char	*d;
+	size_t	i;
 
 	s = (char *)src;
 	d = (char *)dest;
 	i = 0;
-	if (d > s) //check whether the destination memory (d) is located after the source memory (s) in memory, indicating an overlap between the two memory regions(When d is greater (higher address) than s, it means that the destination memory starts after the source memory in memory layout)
-		while ( len-- > 0 )
+	if (d == NULL && s == NULL)
+		return (NULL);
+	if (d > s)
+	{
+		while (len-- > 0)
+		{
 			d[len] = s[len];
-	else	//normal case
+		}
+	}
+	else
+	{
 		while (i < len)
 		{
 			d[i] = s[i];
 			i++;
 		}
-	return(dest);
+	}
+	return (dest);
 }
-/*int main()
-{
-	char a[20] = "ziyad derfoufi";
-	printf("%s",ft_memmove(a+3,a,15));
-}*/
+// int main()
+// {
+// 	void *s;
+// 	printf("%s",ft_memmove(s+3,s,15));
+// }

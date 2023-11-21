@@ -11,22 +11,23 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-/* set "len" amount of bytes of "c" to unsigned char "b" custun implementation*/
-void	*ft_memset(void *b, int c, size_t len) //int offers flexibility to set a wider range of values in memory,size_t;represent sizes of objects
+
+void	*ft_memset(void *b, int c, size_t len)
 {
-	while ( len > 0)
+	while (len > 0)
 	{
-		((unsigned char *)b)[len-1] = (unsigned char)c; // -1 bec while itterating we start from zeroc, unsigned char=>avoiding sign-extension issues that could occur
+		((unsigned char *)b)[len - 1] = (unsigned char)c;
 		len--;
 	}
-	return(b);
+	return (b);
 }
-int main()
-{
-	char n= 4;
-	ft_memset(&n , 1, 1);
-	printf("%hhd\n",n);
-	// printf("%ld",memset(&n,x,1));
-}
-/*What would happen if b in ft_memset points to NULL?
-It could lead to unexpected behavior or segmentation faults as ft_memset attempts to write to a NULL pointer.*/
+
+// int main()
+// {
+// 	char s[5] = "salam";
+// 	int i = 1337;
+// 	ft_memset(s ,i, 1);
+
+// 	printf("%d\n",s[0]);
+// 	// printf("%ld",memset(&n,x,1));
+// }

@@ -6,43 +6,39 @@
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:27:59 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/14 20:28:00 by zderfouf         ###   ########.fr       */
+/*   Updated: 2023/11/16 00:21:46 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strnstr(const char *haystack, const char *needle, size_t len) // locate a substring in a string
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t i;
-	size_t j;
-	char *h;
-	char *n;
+	size_t	i;
+	size_t	j;
 
-	h = (char*)haystack;
-	n = (char*)needle;
 	i = 0;
 	j = 0;
-	if (n[i] == '\0')
-		return(h);
-	while ( h[i] != '\0' && i < len )
+	if (needle[i] == '\0')
+		return ((char *)haystack);
+	while (haystack[i] != '\0' && i < len)
 	{
-		if(n[j] == h[i]) // start of the test
+		if (needle[j] == haystack[i])
 		{
-			while (h[i+j] == n[j] && i+j < len )
+			while (haystack[i + j] == needle[j] && i + j < len)
 			{
-				if(n[j+1] == '\0') // checks wether the 'substring' have ended or not(success)
-					return(h+i);
-				j++; // go to the next letter in both string and 'substring'
+				if (needle[j + 1] == '\0')
+					return ((char *)haystack + i);
+				j++;
 			}
-			j = 0; // the loop fails and initialize the j=0 to go to first letter of the substring and check again
+			j = 0;
 		}
-		i++; // to go to next letter of the string
+		i++;
 	}
-	return(0);
+	return (0);
 }
 
 /*int main()
 {
-	printf("%s",strnstr("","\0",50000));
+	printf("%s",strnstr("salam ana smiti ziad","sa",30));
 }*/
