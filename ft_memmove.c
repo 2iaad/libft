@@ -40,8 +40,3 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	}
 	return (dest);
 }
-// int main()
-// {
-// 	void *s;
-// 	printf("%s",ft_memmove(s+3,s,15));
-// }

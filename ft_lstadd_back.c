@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 20:25:52 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/16 15:46:34 by zderfouf         ###   ########.fr       */
+/*   Created: 2023/11/23 17:16:14 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/23 17:17:31 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (fd == -1)
+	t_list	*lastnode;
+
+	if (!lst || !new)
 		return ;
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else if (n < 0)
+	if (*lst == NULL)// checks if the linked list is empty
 	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(-n, fd);
-	}
-	else if (n >= 10)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + '0', fd);
+		*lst = new; // assign new to the pointer so it can be the only node in the linked list
 	}
 	else
-		ft_putchar_fd(n + '0', fd);
+	{
+		lastnode = ft_lstlast(*lst);
+		lastnode->next = new;
+	}
 }
-// int main()
-// {
-// 	int number = 20002020202;
-// 	ft_putnbr_fd(number,1);
-// 	ft_putchar_fd('\n',1);
-// 	return 0;
-// }

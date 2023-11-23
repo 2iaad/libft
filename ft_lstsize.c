@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 20:25:52 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/16 15:46:34 by zderfouf         ###   ########.fr       */
+/*   Created: 2023/11/22 16:38:46 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/23 17:20:06 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_lstsize(t_list *lst)
 {
-	if (fd == -1)
-		return ;
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else if (n < 0)
+	int		nofn;
+	t_list	*ptr2n;
+
+	nofn = 0;
+	ptr2n = lst;
+	if (ptr2n == NULL)
+		return (0);
+	while (ptr2n != NULL)
 	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(-n, fd);
+		ptr2n = ptr2n->next; 
+		nofn++;
 	}
-	else if (n >= 10)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + '0', fd);
-	}
-	else
-		ft_putchar_fd(n + '0', fd);
+	return (nofn);
 }
-// int main()
-// {
-// 	int number = 20002020202;
-// 	ft_putnbr_fd(number,1);
-// 	ft_putchar_fd('\n',1);
-// 	return 0;
-// }

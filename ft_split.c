@@ -50,7 +50,7 @@ static char	*allocat_andcopy_words(const char *s, int start, int end)
 	return (word);
 }
 
-static char	**assign_worda(int wc, const char *s, char c, char **p2s)
+static char	**assign_words(int wc, const char *s, char c, char **p2s)
 {
 	int		wa;
 	size_t	i;
@@ -92,9 +92,11 @@ char	**ft_split(const char *s, char c)
 	return (p2s);
 }
 
-int main(void)
-{
-    char **result = ft_split("   salam ana smiti ziad", ' ');
-	while (int i = 0;result[i]; i++)
-		puts(result[i]);
-}
+// int main(void)
+// {
+//     // Example usage of ft_split
+//     // const char *input_string = "This is a sample string to split";
+//     char **result = ft_split("\0", '\0');
+// 	for(int i = 0;result[i]; i++)
+// 		puts(result[i]);
+// }

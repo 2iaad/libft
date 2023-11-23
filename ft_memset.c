@@ -22,12 +22,10 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
-// int main()
-// {
-// 	char s[5] = "salam";
-// 	int i = 1337;
-// 	ft_memset(s ,i, 1);
-
-// 	printf("%d\n",s[0]);
-// 	// printf("%ld",memset(&n,x,1));
-// }
+/*int main()
+{
+	char n= 4;
+	ft_memset(&n , 1, 1);
+	printf("%hhd\n",n);
+	// printf("%ld",memset(&n,x,1));
+}*/

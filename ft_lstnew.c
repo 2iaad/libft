@@ -1,44 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 20:25:00 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/14 20:25:01 by zderfouf         ###   ########.fr       */
+/*   Created: 2023/11/22 16:38:32 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/23 17:24:09 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+// create a nod and giving it a content
+t_list	*ft_lstnew(void *cont)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-	size_t			i;
+	t_list	*nn;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src; 
-	i = 0;
-	if (!d && !s)
+	nn = (t_list *) malloc (sizeof(t_list));
+	if (!nn)
 		return (0);
-	while (i < n)
-	{
-		d[i] = s[i];
-		i++;
-	}
-	return (dest);
+	nn->content = cont;
+	nn->next = NULL;
+	return (nn);
 }
-
-// int main()
-// {
-// 	char a[20] = "ziyad derfoufi";
-// 	printf("%s",ft_memcpy(a+3,a,15));
-// }
-// int main()
-// {
-// 	void *d = "";
-// 	char s[] = {97,97};
-// 	printf("%s",ft_memcpy(d,s,2));
-// }

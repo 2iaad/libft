@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
 
-char	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*o;
 	size_t			i;
@@ -22,16 +22,13 @@ char	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (o[i] == (unsigned char)c)
-			return ((char*)o + i);
+			return (o + i);
 		i++;
 	}
 	return (0);
 }
 
-// int main()
-// {
-// 	int *i = "1V";
-// 	char *s = i[0];
-// 	printf("%s",s);
-// 	// printf("%s",ft_memchr("15$cc2Va$321xx",i,10));
-// }
+/*int main()
+  {
+  printf("%s",memchr("123xxxxx",'\0',2));
+  }*/

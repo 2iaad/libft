@@ -1,9 +1,12 @@
+CC = cc
+
+AR = ar rcs
 
 NAME = libft.a
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC =              ft_strlen.c \
+SRC =		ft_strlen.c \
 			 ft_memcpy.c \
 			 ft_strlcpy.c \
 			 ft_strlcat.c \
@@ -37,29 +40,30 @@ SRC =              ft_strlen.c \
 			 ft_putstr_fd.c \
 			 ft_putendl_fd.c \
 			 ft_putnbr_fd.c \
+			 
+BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 
-OBJ = $(SRC:.c=.o) 
+OBJ = $(SRC:.c=.o)
 
+OBJ_BONUS = $(BONUS_SRCS:.c=.o)
 
-#all : $(OUT)
-all : $(NAME)
+all: $(NAME)
 
-#$(OUT) : $(NAME)
-#	gcc -c $^
+bonus : $(OBJ_BONUS)
+	$(AR) $(NAME) $^
       
 $(NAME) : $(OBJ)
-	ar rcs $@ $^
-
+	$(AR) $@ $^
 
 %.o : %.c libft.h
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean :
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean : clean
 	rm -f $(NAME)
 
 re : fclean all
 
-.PHONY : clean re fclean all
+.PHONY : clean re fclean

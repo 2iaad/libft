@@ -6,7 +6,7 @@
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:26:02 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/14 20:26:03 by zderfouf         ###   ########.fr       */
+/*   Updated: 2023/11/22 16:44:06 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,11 @@ void	ft_putstr_fd(char *str, int fd)
 	int	i;
 
 	i = 0;
+	if (fd == -1)
+		return ;
 	while (str[i])
 	{
 		write(fd, &str[i], 1);
 		i++;
 	}
 }
-/*int main()
-{
-    ft_putstr("sir t7wa",1);
-}*/

@@ -23,7 +23,7 @@ int	ft_atoi(const char *str)
 	nb = 0;
 	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
 		i++;
-	if (str[i] == '-' || str[i] == '+' )
+	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			s *= -1;
@@ -39,7 +39,5 @@ int	ft_atoi(const char *str)
 
 // int main()
 // {
-// 	char *c;
-// 	c = "1salamcv1";
-// 	printf("%d",ft_atoi(c));
+// 	printf("%d",atoi("-++----+++--1239999999999999999999234"));
 // }
