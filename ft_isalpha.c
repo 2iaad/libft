@@ -19,9 +19,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-/*int main()
-{
-	int q = ')';
-	printf("%d", ft_isalpha(q));
-}*/

@@ -19,9 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
-/*int main()
-{
-	int q = 128;
-	printf("%d" , ft_isascii(q));
-}*/

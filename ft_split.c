@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zderfouf <zderfouf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:26:11 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/16 00:45:31 by zderfouf         ###   ########.fr       */
+/*   Updated: 2023/11/30 22:30:00 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static char	*allocat_andcopy_words(const char *s, int start, int end)
 	return (word);
 }
 
-static char	**assign_words(int wc, const char *s, char c, char **p2s)
+static char	**sizeofwords(int wc, const char *s, char c, char **p2s)
 {
 	int		wa;
 	size_t	i;
@@ -81,22 +81,15 @@ char	**ft_split(const char *s, char c)
 	char	**p2s;
 	int		wc;
 
+	if (s == NULL)
+		return (NULL);
 	wc = ft_wc(s, c);
 	p2s = (char **) malloc (sizeof(char *) * (wc + 1)); 
 	if (!p2s) 
 		return (NULL);
-	p2s = assign_words(wc, s, c, p2s);
+	p2s = sizeofwords(wc, s, c, p2s);
 	if (!p2s)
 		return (NULL);
 	p2s[wc] = NULL;
 	return (p2s);
 }
-
-// int main(void)
-// {
-//     // Example usage of ft_split
-//     // const char *input_string = "This is a sample string to split";
-//     char **result = ft_split("\0", '\0');
-// 	for(int i = 0;result[i]; i++)
-// 		puts(result[i]);
-// }

@@ -27,10 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-
-// int main()
-// {
-// 	char str[30] = "";
-// 	printf("%s",ft_strrchr(str,'\0'));
-// 	// printf("%c",str[ft_strlen(str)-1]);
-// }

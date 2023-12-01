@@ -19,9 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
-/* int main()
-{
-	int q = 32;
-	printf("%d", ft_isprint(q));
-}*/

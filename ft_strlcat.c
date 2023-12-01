@@ -6,7 +6,7 @@
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:27:06 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/15 15:47:50 by zderfouf         ###   ########.fr       */
+/*   Updated: 2023/11/25 00:34:34 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	k = 0;
+	if (size == 0)
+		return (ft_strlen(src));
 	while (dst[i] && i < size)
 		i++;
 	while ((src[k]) && ((i + k + 1) < size))
@@ -30,11 +32,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[i + k] = '\0';
 	return (i + ft_strlen(src));
 }
-
-/*int main()
-{
-	char dest[11] = "oho";
-	char *src = "salam";
-	printf("%lu\n",ft_strlcat(dest,src,11));
-	printf("%s\n",dest);
-}*/

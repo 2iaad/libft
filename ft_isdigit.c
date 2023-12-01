@@ -19,10 +19,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-
-/*int main()
-{
-	int q = 48;
-	printf("%d\n" , ft_isdigit(q));
-	return 0;
-}*/

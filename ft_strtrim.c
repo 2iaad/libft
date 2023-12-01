@@ -6,7 +6,7 @@
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:28:24 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/15 14:54:41 by zderfouf         ###   ########.fr       */
+/*   Updated: 2023/11/24 19:42:46 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	str = NULL;
-	if (s1 != NULL || set != NULL)
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	else
 	{
 		i = 0;
 		j = ft_strlen(s1);
@@ -34,9 +36,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (str);
 }
-// int main()
-// {
-//     char *s1 = "salam cv";
-//     char *s2 = "sav";
-//     printf("%s",ft_strtrim(s1,s2));
-// }

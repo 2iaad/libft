@@ -6,7 +6,7 @@
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:27:59 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/16 00:21:46 by zderfouf         ###   ########.fr       */
+/*   Updated: 2023/11/25 00:32:51 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	i = 0;
 	j = 0;
+	if (len == 0 && haystack == NULL)
+		return (NULL);
 	if (needle[i] == '\0')
 		return ((char *)haystack);
 	while (haystack[i] != '\0' && i < len)
@@ -37,8 +39,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-/*int main()
-{
-	printf("%s",strnstr("salam ana smiti ziad","sa",30));
-}*/

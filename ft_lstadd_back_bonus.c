@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 17:16:14 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/23 17:17:31 by zderfouf         ###   ########.fr       */
+/*   Created: 2023/11/24 19:41:01 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/25 00:36:12 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!lst || !new)
 		return ;
-	if (*lst == NULL)// checks if the linked list is empty
+	if (*lst == NULL)
 	{
-		*lst = new; // assign new to the pointer so it can be the only node in the linked list
+		*lst = new;
 	}
 	else
 	{

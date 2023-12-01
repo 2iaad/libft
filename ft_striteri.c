@@ -3,39 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zderfouf <zderfouf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:26:42 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/15 15:38:39 by zderfouf         ###   ########.fr       */
+/*   Updated: 2023/11/26 23:48:47 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// void	f(unsigned int i, char *s)
-// {
-// 	if (*s == 'a')
-// 	{
-// 		*s = ' ';
-// 	}
-// 	i++;
-// }
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;
 
 	i = 0;
-	while (s[i])
+	if (!s || !f)
+		return ;
+	if (s != NULL)
 	{
-		f(i, &s[i]);
-		i++;
+		while (s[i] && f)
+		{
+			f(i, &s[i]);
+			i++;
+		}
 	}
 }
-
-/*int main()
-{
-	char s[15] = "sir gha thwaa";
-	ft_striteri(s,f);
-	printf("%s",s);
-}*/

@@ -6,7 +6,7 @@
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:28:34 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/14 20:28:35 by zderfouf         ###   ########.fr       */
+/*   Updated: 2023/11/25 00:32:28 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	if (len > ft_strlen(s) - start)
@@ -33,9 +35,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-
-// int main()
-// {
-//     char *a = "qwerty";
-//     printf("%s\n",ft_substr(a,1,6));
-// }

@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/22 16:38:32 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/23 17:24:09 by zderfouf         ###   ########.fr       */
+/*   Created: 2023/11/24 19:42:12 by zderfouf          #+#    #+#             */
+/*   Updated: 2023/11/24 19:42:15 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// create a nod and giving it a content
-t_list	*ft_lstnew(void *cont)
-{
-	t_list	*nn;
 
-	nn = (t_list *) malloc (sizeof(t_list));
-	if (!nn)
+int	ft_lstsize(t_list *lst)
+{
+	int		nofn;
+	t_list	*ptr2n;
+
+	nofn = 0;
+	ptr2n = lst;
+	if (ptr2n == NULL)
 		return (0);
-	nn->content = cont;
-	nn->next = NULL;
-	return (nn);
+	while (ptr2n != NULL)
+	{
+		ptr2n = ptr2n->next; 
+		nofn++;
+	}
+	return (nofn);
 }

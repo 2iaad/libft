@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zderfouf <zderfouf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 19:41:55 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/22 16:42:08 by zderfouf         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:09:30 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <string.h>
-# include <strings.h>
-# include <stdio.h>
 # include <unistd.h>
 
-typedef struct s_list // define a structure called s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -64,5 +61,7 @@ void		ft_lstadd_front(t_list **lst, t_list *new);
 int			ft_lstsize(t_list *lst);
 t_list		*ft_lstlast(t_list *lst);
 void		ft_lstadd_back(t_list **lst, t_list *new);
+void		ft_lstdelone(t_list *lst, void (*del)(void*));
+void		ft_lstclear(t_list **lst, void (*del)(void*));
 
 #endif

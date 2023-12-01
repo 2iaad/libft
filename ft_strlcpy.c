@@ -27,11 +27,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (ft_strlen((char *)src));
 }
-
-/*int main()
-{
-	char d[20] = "salam hehe";
-	printf("%s\n",d);
-	printf("%lu\n",ft_strlcpy(d,"lorem ipsum dolor sit amet",5));
-	printf("%s\n",d);
-}*/

@@ -1,6 +1,6 @@
 CC = cc
 
-AR = ar rcs
+AR = ar rc
 
 NAME = libft.a
 
@@ -41,7 +41,9 @@ SRC =		ft_strlen.c \
 			 ft_putendl_fd.c \
 			 ft_putnbr_fd.c \
 			 
-BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+BONUS_SRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
+			ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c ft_lstclear_bonus.c \
 
 OBJ = $(SRC:.c=.o)
 
@@ -49,21 +51,22 @@ OBJ_BONUS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
-bonus : $(OBJ_BONUS)
-	$(AR) $(NAME) $^
-      
-$(NAME) : $(OBJ)
-	$(AR) $@ $^
-
 %.o : %.c libft.h
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean :
 	rm -f $(OBJ) $(OBJ_BONUS)
 
+
+bonus : $(OBJ_BONUS)
+	$(AR) $(NAME) $^
+      
+$(NAME) : $(OBJ)
+	$(AR) $@ $^
+
 fclean : clean
 	rm -f $(NAME)
 
 re : fclean all
 
-.PHONY : clean re fclean
+.PHONY : clean

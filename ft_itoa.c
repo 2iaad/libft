@@ -53,9 +53,3 @@ char	*ft_itoa(int n)
 		ptr[0] = '-';
 	return (ptr);
 }
-
-/*int main()
-{
-	int c = -345343453;
-	printf("%s",ft_itoa(c));
-}*/

@@ -6,7 +6,7 @@
 /*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:25:42 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/15 15:43:54 by zderfouf         ###   ########.fr       */
+/*   Updated: 2023/11/25 00:36:33 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (fd == -1)
+	if (!s)
 		return ;
 	while (*s)
 	{

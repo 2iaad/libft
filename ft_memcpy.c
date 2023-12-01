@@ -30,15 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// int main()
-// {
-// 	char a[20] = "ziyad derfoufi";
-// 	printf("%s",ft_memcpy(a+3,a,15));
-// }
-// int main()
-// {
-// 	void *d = "";
-// 	char s[] = {97,97};
-// 	printf("%s",ft_memcpy(d,s,2));
-// }

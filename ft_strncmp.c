@@ -23,7 +23,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t	n)
 		i++;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-/*int main()
-{
-	printf("%d",ft_strncmp("abcdefgh", "abcdwxyz", 4));
-}*/

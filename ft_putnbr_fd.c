@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zderfouf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zderfouf <zderfouf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:25:52 by zderfouf          #+#    #+#             */
-/*   Updated: 2023/11/16 15:46:34 by zderfouf         ###   ########.fr       */
+/*   Updated: 2023/11/27 17:24:06 by zderfouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + '0', fd);
 }
-// int main()
-// {
-// 	int number = 20002020202;
-// 	ft_putnbr_fd(number,1);
-// 	ft_putchar_fd('\n',1);
-// 	return 0;
-// }

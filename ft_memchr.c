@@ -27,8 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-/*int main()
-  {
-  printf("%s",memchr("123xxxxx",'\0',2));
-  }*/
